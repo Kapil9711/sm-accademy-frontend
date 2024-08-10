@@ -8,7 +8,7 @@ export const Navbar = styled.nav`
   align-items: center;
   justify-Content:space-around;
   margin: auto;
-  ${'' /* position: fixed; */}
+  position: fixed;
 
 {
 
@@ -40,11 +40,10 @@ export const Navbar = styled.nav`
     border: none;
     cursor: pointer;
 }
-& .header-list > li:hover{
+& .header-list  li:hover{
   color: #FE5D37;
 }
 `
-// export default Navbar;
 
 export const Main = styled.main`
      margin: 0;

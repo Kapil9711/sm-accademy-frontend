@@ -1,7 +1,7 @@
 import { Navbar } from "./Hero.styles";
 import { Main } from "./Hero.styles";
 
-import Bottom from "../../Images/assest/Bottom.png";
+// import Bottom from "../../Images/assest/Bottom.png";
 import carousel from "../../Images/assest/carousel.jpg";
 import carousel2 from "../../Images/assest/carousel2.jpg";
 
