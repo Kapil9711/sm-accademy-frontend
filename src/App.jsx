@@ -4,12 +4,14 @@ import AuthPage from "./pages/AuthPage.jsx";
 import DashboardPage from "./pages/DashboardPage";
 import styled from "styled-components";
 
+
 //styles for App
 const AppWraper = styled.div`
   width: min(100%, 2000px);
   margin-inline: auto;
   padding-inline: 40px;
 `;
+
 
 function App() {
   return (

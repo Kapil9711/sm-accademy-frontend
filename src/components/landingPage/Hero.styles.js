@@ -1,11 +1,14 @@
 import styled from "styled-components";
 
+
 const Navbar = styled.nav`
   padding-block: 16px;
   min-height: 60px;
+
   width: 100%;
-  display: flex;
+  display:flex;
   align-items: center;
+
   justify-content: space-between;
   margin: auto;
   user-select: none;
@@ -13,6 +16,7 @@ const Navbar = styled.nav`
   max-height: 100px;
 
   & ul {
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -74,7 +78,7 @@ const Navbar = styled.nav`
       display: initial;
     }
   }
-`;
+`
 
 const TitleWrapper = styled.div`
   display: flex;
@@ -94,3 +98,4 @@ const TitleWrapper = styled.div`
 `;
 
 export { Navbar, TitleWrapper };
+
