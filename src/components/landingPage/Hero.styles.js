@@ -1,39 +1,34 @@
 import styled from "styled-components";
 
 const Navbar = styled.nav`
-  background-color: red;
   height: 60px;
   width: 100%;
-  display:flex;
-  alignItems: center;
-  justifyContent:center;
-  margin: auto
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 
-& h2{
-   margin: 0;
-   border: 2px solid black;
-}
-   & .header-list{
+  margin: auto & h2 {
+    margin: 0;
+  }
+  & .header-list {
     display: flex;
     list-style: none;
-    alignItems: center;
-    justifycontent: center;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
     gap: 2em;
-    border: 2px solid black
   }
 
   & .header-list a {
     text-decoration: none;
-}
-& .student-btn{
-    font-weight: ;
-    transition: .5s;
+  }
+  & .student-btn {
+    transition: 0.5s;
     height: 40px;
     padding: 2px;
     border-radius: 50px;
-}
-
-`
+    cursor: pointer;
+  }
+`;
 
 export default Navbar;
-
