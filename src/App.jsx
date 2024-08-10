@@ -1,8 +1,16 @@
+import { Routes, Route } from "react-router-dom";
+import LandingPage from "./pages/LandingPage.jsx";
+import AuthPage from "./pages/AuthPage.jsx";
+import DashboardPage from "./pages/DashboardPage";
+
 function App() {
   return (
     <>
-      <h1>hello jyoti</h1>
-      <h2>hello from kapil</h2>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/auth" element={<AuthPage />} />
+        <Route path="/dashboard" element={<DashboardPage />} />
+      </Routes>
     </>
   );
 }
