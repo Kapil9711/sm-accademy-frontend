@@ -1,24 +1,49 @@
 // import { Link } from "react-router-dom";
-import Navbar from "./Hero.styles";
-// import './header.css';
+import { useState } from "react";
+import { SmallButton } from "../../utlis/Buttons";
+import { Navbar, TitleWrapper } from "./Hero.styles";
+import { GiHamburgerMenu } from "react-icons/gi";
+
+const SectionsTitle = ["Home", "Contect", "Classes", "About Us", "Appoinment"];
+
 const Hero = () => {
+  const [showSections, setShowSections] = useState(false);
+  console.log(showSections);
   return (
     <>
-      <Navbar>
-        <h2>SM.accademy</h2>
-      <ul className="header-list">
-        
-          <li>Home</li>
-        
-          <li>Contect</li>
-       <li>Classes </li>
-       <li>About Us</li>
-       <li>Appointment</li>
-        </ul>
-        <button className="student-btn">Student Login</button>
-
+      <Navbar showsections={showSections}>
+        <TitleWrapper>
+          <GiHamburgerMenu
+            onClick={() => setShowSections((prev) => !prev)}
+            className="hamburger-icon"
+          />
+          <h2>SM.accademy</h2>
+        </TitleWrapper>
+        <SmallButton className="btn1">Student Login</SmallButton>
+        <NavSectionList {...{ showSections }} />
+        <SmallButton className="btn2">Student Login</SmallButton>
       </Navbar>
     </>
+  );
+};
+
+const NavSectionList = ({ showSections }) => {
+  const [isActive, setIsActive] = useState("Home");
+
+  return (
+    <ul className={showSections && "active"}>
+      {SectionsTitle.map((title) => {
+        return (
+          <li
+            className={isActive === title && "active"}
+            onClick={() => setIsActive(title)}
+            key={title}
+          >
+            {title}
+          </li>
+        );
+      })}
+    </ul>
   );
 };
 
