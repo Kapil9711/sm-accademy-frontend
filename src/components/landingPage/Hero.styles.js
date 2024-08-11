@@ -8,12 +8,13 @@ const Navbar = styled.nav`
   width: 100%;
   display:flex;
   align-items: center;
-
+  background-color:white;
   justify-content: space-between;
   margin: auto;
   user-select: none;
   transition: max-height 0.2s ease-in-out;
   max-height: 100px;
+  ${'' /* position:fixed; */}
 
   & ul {
 
@@ -47,6 +48,7 @@ const Navbar = styled.nav`
   & .btn2 {
     display: initial;
   }
+  
 
   @media (max-width: 880px) {
     & ul {
@@ -79,6 +81,55 @@ const Navbar = styled.nav`
     }
   }
 `
+const Main = styled.main`
+
+{
+
+}
+ & .carousel-item {
+    
+    position: relative;
+     width: 100%;
+    height: auto;
+
+  }
+
+ & .carousel-img {
+    max-width: 100%;
+    height: auto;
+    oject-fit:cover;
+  }
+  & .slick-prev,
+.slick-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  cursor: pointer;
+}
+
+& .slick-prev {
+  left: 10px;
+}
+
+& .slick-next {
+  right: 10px;
+  height: 50px;
+  
+}
+
+& .slick-next:hover {
+ background-color:  hsl(11, 99%, 50%);
+}
+
+& .carousel-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+`
+  
 
 const TitleWrapper = styled.div`
   display: flex;
@@ -97,5 +148,5 @@ const TitleWrapper = styled.div`
   }
 `;
 
-export { Navbar, TitleWrapper };
+export { Navbar, TitleWrapper, Main };
 
